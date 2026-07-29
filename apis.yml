@@ -1,4 +1,16 @@
 aid: journera
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/journera.png
 name: Journera
 description: Journera is a company surfaced as a portfolio company of a16z and added to the API Evangelist
   network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
@@ -11,7 +23,22 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+x-enrichment:
+  last_run: '2026-07-19'
+  status: no-live-surface
+  note: Enrichment probe found no live web presence. journera.com is registered (name.com
+    nameservers) but publishes no A/AAAA record and does not resolve; journera.io resolves
+    only to a Sedo domain-parking IP (91.195.240.94) with a failing TLS handshake. No
+    developer portal, documentation, or API specification could be located, so no artifacts
+    were searched, derived, or generated. Company appears defunct.
+  probes:
+  - host: journera.com
+    dns: no-a-record
+    http: unresolvable
+  - host: journera.io
+    dns: 91.195.240.94
+    http: parked-sedo-tls-fail
 tags:
 - Company
 apis: []
